@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        "use strict";
+        let d=98;
         // let a = 34;
         // let a = "This is me";
         let a = 45;
@@ -30,9 +32,36 @@
                 console.log("Hello Programmer");
             }
         }
+        document.addEventListener("click",function clicked(){
+            console.log("clicked");
+            //alert("Hello Tanay");
+            let conf = confirm("Are you sure");
+            console.log(conf);
+            
+        });
+        let arr = [12,23,34,45,56,67,78,89];
+        for(let i = 0; i < arr.length; i++){
+            console.log(arr[i]);
+        }
+        //console.log(this);
+        // function myFunction(number){
+        //     console.log("The number is: "+this);
+        // }
+        let myfunc = (number)=>{
+            console.log("The number is: "+this);
+        }
+        myfunc();
+        let mobj={
+            a:this,
+            myfunc:function(number){
+                console.log(this);
+            }
+        };
+        mobj.myfunc();
+        console.log(mobj.a); 
     </script>
 </head>
 <body>
-    I am learning JS
+    <h1>I am learning JS</h1>
 </body>
 </html>
